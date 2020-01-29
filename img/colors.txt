@@ -1,0 +1,5 @@
+ztcharpente - colors
+
+dark    #40382E
+light   #FAF4E7
+orange  #EC9F35
