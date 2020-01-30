@@ -69,6 +69,7 @@ header {
 }
 
 nav {
+    font-family: "Noto Serif", serif;
     max-width: 400px;
     font-size: small;
     display: flex;
@@ -85,18 +86,30 @@ nav a:hover {
     text-decoration: underline #EC9F35;
 }
 
-nav a:active {
+nav a:ac1emtive {
     color: #EC9F35;
     text-decoration: underline #EC9F35;
     
 }
 
-.img-index {
+#img-index {
     width: 100%;
 }
 
 #txt-index {
+    font-family: "Noto Serif", serif;
+    line-height: 1.5;
     padding: 20px;
+    text-align: center;
+    font-size: small;
+    letter-spacing: .05em;
+}
+
+#txt-index h1 {
+    font-family: "Noto Serif", serif;
+    font-size: medium;
+    font-weight: bold;
+    padding-bottom: 10px;
 }
 
 #txt-index a {
