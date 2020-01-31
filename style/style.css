@@ -48,22 +48,57 @@ table {
 }
 
 /* style */
+
+/* media queries */
+
+@media (max-width: 399px) {
+    #logo-screen {
+        display: none;
+    }
+}
+
+@media (min-width: 400px) {
+    #logo-mobile {
+        display: none;
+    }
+
+    section img {
+        width: 90%;
+        border-radius: 5px;
+    }
+}
+
 /* layout */
+
+html {
+    width: 100%;
+    height: 100%;
+}
 
 body {
     display: grid;
-    padding-top: 20px;
+    margin-top: 20px;
     grid-row-gap: 20px;
     max-width: 800px;
+    min-width: 200px;
     margin: 0 auto;
+
+    min-height: 100%;
+    grid-template-rows: auto auto 1fr auto;
 }
 
     header {
         text-align: center;
     }
     
-        #logo {
-            width: 200px;
+        #logo-mobile {
+            margin-top: 20px;
+            width: 150px;
+        }
+
+        #logo-screen {
+            margin-top: 20px;
+            width: 350px;
         }
 
     nav {
@@ -83,12 +118,17 @@ body {
 
         section img {
             max-width: 100%;
+            margin: 0 auto;
         }
 
         section .text {
             width: 80%;
-            margin: 0 auto;
+            margin: auto auto;
             text-align: center;
+        }
+        
+        #logo-contact {
+            width: 100px;
         }
 
     footer {
@@ -100,6 +140,7 @@ body {
 body {
     background-color: #FAF4E7; 
     color: #40382E;
+    box-shadow: 0 0 5px #40382E88;
 }
 
 a {
@@ -114,6 +155,7 @@ a:hover, a:active {
     nav a {
         color: #40382E;
         text-decoration: none;
+        font-family: monospace;
     }
 
     nav a:hover, a:active {
@@ -137,13 +179,17 @@ body {
     font-family: "Noto Serif", serif;
     letter-spacing: .05em;
     line-height: 1.5;
-    font-size: small;
+    font-size: medium;
 }
 
 h1 {
-    font-size: medium;
+    font-size: large;
     font-weight: bold;
     padding-bottom: 10px;
+}
+
+b {
+    font-weight: bold;
 }
 
     footer {
@@ -151,10 +197,10 @@ h1 {
     }
         
         #footer-links {
-            font-size: x-small; 
+            font-size: small; 
         }
 
         #copyright {
-            font-size: xx-small;
+            font-size: x-small;
             justify-self: center;
         }
