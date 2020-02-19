@@ -51,22 +51,33 @@ table {
 
 /* media queries */
 
-@media (max-width: 399px) {
-    #logo-screen {
-        display: none;
+@media (min-width: 700px) {
+    section.about {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    section.about img {
+        width: 100%;
+        margin: 20px 0 auto auto;
+    }
+
+    section.index img {
+        max-width: 66%;
     }
 }
 
-@media (min-width: 400px) {
-    #logo-mobile {
-        display: none;
-    }
 
-    section img {
-        width: 90%;
-        border-radius: 5px;
-    }
+@media (max-width: 699px) {
+        section.about {
+        }
+
+        section.about img {
+            max-width: 50%;
+            margin: auto;
+        }
+
 }
+
 
 /* layout */
 
@@ -77,9 +88,8 @@ html {
 
 body {
     display: grid;
-    margin-top: 20px;
     grid-row-gap: 20px;
-    max-width: 800px;
+    max-width: 900px;
     min-width: 200px;
     margin: 0 auto;
 
@@ -88,17 +98,19 @@ body {
 }
 
     header {
+        margin-top: 35px;
+        margin-left: 35px;
+        margin-right: 35px;
         text-align: center;
     }
     
         #logo-mobile {
-            margin-top: 20px;
             width: 150px;
         }
 
         #logo-screen {
-            margin-top: 20px;
-            width: 350px;
+            width: 100%;
+            max-width: 500px;
         }
 
     nav {
@@ -114,21 +126,46 @@ body {
     section {
         display: grid;
         grid-row-gap: 20px;
+        grid-column-gap: 20px;
+        margin: auto 20px;
     }
 
         section img {
-            max-width: 100%;
-            margin: 0 auto;
+            max-width: 90%;
+            margin: auto;
+            border-radius: 5px;
         }
 
-        section .text {
-            width: 80%;
+    section.about {
+    }
+
+
+
+        .text {
             margin: auto auto;
-            text-align: center;
+            padding: 20px;
         }
-        
+
         #logo-contact {
             width: 100px;
+        }
+
+    section.contact {
+        text-align: center;
+    }
+
+    #portfolio {
+        margin: 20px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        justify-content: center;
+    }
+
+        .miniature {
+            background-color: #EC9F35;
+            width: 200px;
+            height: 200px;
         }
 
     footer {
@@ -140,7 +177,6 @@ body {
 body {
     background-color: #FAF4E7; 
     color: #40382E;
-    box-shadow: 0 0 5px #40382E88;
 }
 
 a {
@@ -177,7 +213,6 @@ a:hover, a:active {
 
 body {
     font-family: "Noto Serif", serif;
-    letter-spacing: .05em;
     line-height: 1.5;
     font-size: medium;
 }
@@ -186,6 +221,7 @@ h1 {
     font-size: large;
     font-weight: bold;
     padding-bottom: 10px;
+    letter-spacing: .05em;
 }
 
 b {
