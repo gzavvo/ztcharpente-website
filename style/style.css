@@ -62,7 +62,7 @@ table {
     }
 
     section.index img {
-        max-width: 66%;
+        max-width: 100%;
     }
 }
 
@@ -104,10 +104,6 @@ body {
         text-align: center;
     }
     
-        #logo-mobile {
-            width: 150px;
-        }
-
         #logo-screen {
             width: 100%;
             max-width: 500px;
@@ -131,7 +127,7 @@ body {
     }
 
         section img {
-            max-width: 90%;
+            max-width: 100%;
             margin: auto;
             border-radius: 5px;
         }
@@ -143,7 +139,6 @@ body {
 
         .text {
             margin: auto auto;
-            padding: 20px;
         }
 
         #logo-contact {
