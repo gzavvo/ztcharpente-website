@@ -132,6 +132,14 @@ body {
             border-radius: 5px;
         }
 
+        section p {
+            padding-top: 20px;
+        }
+
+        section em {
+            font-weight: bold;
+        }
+
     section.about {
     }
 
