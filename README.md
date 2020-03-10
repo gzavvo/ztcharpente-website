@@ -16,6 +16,7 @@ TODO
 [x] remove subtitle from header
 [x] justify text to picture in index
 
-[ ] find hebergement
+[ ] host website
+    [ ] chek https://www.netlify.com
 
 [ ] validate new header
