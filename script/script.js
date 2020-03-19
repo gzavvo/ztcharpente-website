@@ -188,6 +188,11 @@ function getRadioValue() {
     }
 }
 
+function removeNode(elementId) {
+  let element = document.querySelector(`${elementId}`);
+  element.parentNode.removeChild(element);
+}
+
 function removeChildren(elementId) {
     let element = document.querySelector(`${elementId}`);
     while (element.firstChild) {
@@ -196,18 +201,23 @@ function removeChildren(elementId) {
 }
 
 function openAlbum(albumObj) {
-    removeChildren("#works-section");
+    removeNode("#portfolio");
+    removeChildren("#filter");
     
     let workSection = document.querySelector("#works-section");
+    let filter = document.querySelector("#filter");
 
     let imageViewer = document.createElement("div");
     let imgFullScreen = document.createElement("img");
     let pellicule = document.createElement("div");
+    let backToGallery = document.createElement("a");
 
     imageViewer.id = "imageViewer";
     imgFullScreen.id = "fullscreen";
     imgFullScreen.src = albumObj.pictures[0];
     pellicule.id = "pellicule";
+    backToGallery.textContent = "↩ Retour à la gallerie";
+    backToGallery.href = "works.html";
 
     for (let i = 0; i < albumObj.pictures.length; i++) {
         let newImg = document.createElement("img");
@@ -216,6 +226,7 @@ function openAlbum(albumObj) {
         pellicule.appendChild(newImg);
     }
 
+    filter.appendChild(backToGallery);
     imageViewer.appendChild(imgFullScreen);
     imageViewer.appendChild(pellicule);
     workSection.appendChild(imageViewer);
@@ -249,9 +260,6 @@ createGallery();
 let miniatures = document.querySelectorAll(".miniature");
 
 // add event listener on miniatures
-//for (let i = 0; i < miniatures.length; i++) {
-    //miniatures[i].addEventListener("click", openAlbum(this.value));
-//}
 
 for ( let i = 0; i < miniatures.length; i++) {
     console.log(miniatures[i].value);
