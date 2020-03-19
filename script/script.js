@@ -208,11 +208,13 @@ function openAlbum(albumObj) {
     let filter = document.querySelector("#filter");
 
     let imageViewer = document.createElement("div");
+    let albumTitle = document.createElement("h1");
     let imgFullScreen = document.createElement("img");
     let pellicule = document.createElement("div");
     let backToGallery = document.createElement("a");
 
     imageViewer.id = "imageViewer";
+    albumTitle.textContent = albumObj.title;
     imgFullScreen.id = "fullscreen";
     imgFullScreen.src = albumObj.pictures[0];
     pellicule.id = "pellicule";
@@ -228,6 +230,7 @@ function openAlbum(albumObj) {
 
     filter.appendChild(backToGallery);
     imageViewer.appendChild(imgFullScreen);
+    imageViewer.appendChild(albumTitle);
     imageViewer.appendChild(pellicule);
     workSection.appendChild(imageViewer);
 
