@@ -134,7 +134,6 @@ let albums = [
             "../img/cabane/boussac-bourg2/01-arc-lamelle-visse.jpg",
             "../img/cabane/boussac-bourg2/02-plancher-ossature.jpg",
             "../img/cabane/boussac-bourg2/03-ossature-cabane.jpg",
-            "../img/cabane/boussac-bourg2/04-pare-pluie.jpg",
             "../img/cabane/boussac-bourg2/05-toiture-vegetale.jpg",
             "../img/cabane/boussac-bourg2/06-cabane-interieur.jpg",
             "../img/cabane/boussac-bourg2/07-cabane-facade.jpg",
